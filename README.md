@@ -16,7 +16,7 @@ Clone and install Yarn dependencies:
 
 ```bash
 $ git clone git@github.com:sotatek-dev/tai-chart-d3.git
-$ cd react-boilerplate
+$ cd chartjs
 $ yarn
 ```
 
