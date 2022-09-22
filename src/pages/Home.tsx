@@ -5,6 +5,7 @@ import RadialChart from "../components/chart/RadialChart";
 const Home: React.FC = (): JSX.Element => {
   const [temps, setTemps] = React.useState({});
   const [city, setCity] = React.useState<string>("sf");
+
   React.useEffect(() => {
     Promise.all([
       fetch(`../src/data/sf.json`),
