@@ -5,9 +5,12 @@ import RadialChart from "../components/chart/RadialChart";
 const Home: React.FC = (): JSX.Element => {
   const [temps, setTemps] = React.useState({});
   const [city, setCity] = React.useState<string>("sf");
-
   React.useEffect(() => {
-    Promise.all([fetch(`../src/data/sf.json`), fetch(`../src/data/ny.json`), fetch(`../src/data/am.json`)])
+    Promise.all([
+      fetch(`../src/data/sf.json`),
+      fetch(`../src/data/ny.json`),
+      fetch(`../src/data/am.json`),
+    ])
       .then((responses) => Promise.all(responses.map((resp) => resp.json())))
       .then(([sf, ny, am]) => {
         sf.forEach((day) => (day.date = new Date(day.date)));
