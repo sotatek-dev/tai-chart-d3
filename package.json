@@ -13,6 +13,7 @@
     "lint": "yarn lint-js && yarn lint-ts",
     "lint-js": "eslint './src/**/*.{js,jsx,ts,tsx}'",
     "lint-ts": "tsc --noemit",
+    "format": "prettier --write \"src/**/*.{ts,js,tsx}\" --config .prettierrc",
     "prepare": "husky install"
   },
   "devDependencies": {
