@@ -19,7 +19,6 @@ type Slices = {
   fill: string;
 };
 const RadialChart = ({ data }) => {
-  console.log('data',data);
   const [slices, setSlices] = useState<Slices[]>([]);
   const [tempAnnotations, setTempAnnotations] = useState<TempAnnotations[]>([]);
   const [prevRow, setPrevRow] = useState(null);

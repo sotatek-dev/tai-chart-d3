@@ -1,0 +1,10 @@
+.Dashboard {
+  .ChartStatistic {
+    max-width: 500px;
+    margin: auto;
+
+    &.isBar {
+      max-width: 750px;
+    }
+  }
+}

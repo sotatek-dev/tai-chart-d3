@@ -1,19 +1,35 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "allowJs": true,
     "target": "esnext",
+    "strict": true,
+    "alwaysStrict": true,
     "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noEmit": true,
-    "jsx": "react",
+    "types": [
+      "react-spring",
+      "jest"
+    ],
+    "jsx": "react-jsx",
     "lib": [
       "es6",
       "dom"
     ],
     "module": "commonjs",
-    "allowSyntheticDefaultImports": true
   },
   "include": [
-    "./src"
+    "src"
   ]
 }

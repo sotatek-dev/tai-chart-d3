@@ -1,0 +1,34 @@
+@import "../../asset/common";
+
+.MainLayout {
+  min-height: 100vh !important;
+
+  .ant-layout-header,
+  .ant-layout-content,
+  .ant-layout-footer {
+    background: $GHOST_WHITE;
+  }
+
+  .innerLayout {
+    background: $GHOST_WHITE;
+
+    .ant-layout-header {
+      height: calc(44px + 30px + 10px);
+      background: $GHOST_WHITE;
+      padding-top: 30px;
+      padding-bottom: 10px;
+
+      .backBtn {
+        i {
+          font-size: 15px;
+          color: $FLAT_ALUMINUM;
+        }
+      }
+
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+      }
+    }
+  }
+}
