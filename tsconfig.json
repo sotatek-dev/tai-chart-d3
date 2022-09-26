@@ -19,7 +19,6 @@
     "noUnusedParameters": true,
     "noEmit": true,
     "types": [
-      "react-spring",
       "jest"
     ],
     "jsx": "react-jsx",

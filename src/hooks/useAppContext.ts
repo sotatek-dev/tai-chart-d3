@@ -1,10 +1,5 @@
 import { createContext, useReducer } from "react";
 
-interface AppContext {
-  state: AppContextState;
-  dispatch: AppContextDispatch;
-}
-
 interface AppContextState {
   count: number;
 }
@@ -22,10 +17,7 @@ export const initialState: AppContextState = {
   count: 0,
 };
 
-const reducer = (
-  state: AppContextState,
-  action: AppContextDispatch
-): AppContextState => {
+const reducer = (state: AppContextState, action: AppContextDispatch): AppContextState => {
   switch (action.type) {
     case "COUNT_INCREMENT":
       if (typeof action.payload.amount === "number") {

@@ -9,9 +9,7 @@ export const useDeepEffect = (effectFunc, deps) => {
       isFirstRender.current = false;
       return;
     }
-    const isChangedDeps = deps.some(
-      (dep, index) => !_.isEqual(dep, prepDeps.current[index])
-    );
+    const isChangedDeps = deps.some((dep, index) => !_.isEqual(dep, prepDeps.current[index]));
     if (isChangedDeps) {
       effectFunc();
       prepDeps.current = deps;

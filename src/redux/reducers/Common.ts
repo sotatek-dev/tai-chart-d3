@@ -6,11 +6,11 @@ const initialState: CommonState = {
   test: false,
 };
 
-const SetFactor = (state = initialState, action: any) => {
+const Common = (state = initialState, action: any) => {
   switch (action.type) {
     default:
       return state;
   }
 };
 
-export default SetFactor;
+export default Common;
