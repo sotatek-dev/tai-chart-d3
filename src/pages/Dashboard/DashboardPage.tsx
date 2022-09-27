@@ -21,7 +21,8 @@ export default function Dashboard() {
       ],
       disabled: false,
       showSearch: false,
-      status: "error",
+      // status: "error",
+      // isMulti: "multiple"
     }
   );
 

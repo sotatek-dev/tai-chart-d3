@@ -21,10 +21,12 @@ interface IRestProps {
 	status?: "error" | "warning" | "",
 	allowClear?: boolean,
 	size?: "large" | "middle" | "small",
-	placement?: "bottomLeft" | "bottomRight" | "topLeft" | "topRight"
+	placement?: "bottomLeft" | "bottomRight" | "topLeft" | "topRight",
+	isMulti?: "multiple" | "tags",
+	[x: string]: any
 }
 export function useSelect(props: IRestProps): { currentSelected: string | number, selectDom: ReactElement } {
-	const { data, className, disabled, showSearch, placeholder, filterOption, filterSort, bordered, status, allowClear, size, placement } = props;
+	const { data, className, disabled, showSearch, placeholder, filterOption, filterSort, bordered, status, allowClear, size, placement, isMulti, ...restProps } = props;
 	const [currentSelected, setCurrentSelected] = useState<string | number>(data[0].key.toString());
 
 	const selectDom = useMemo(() => {
@@ -43,6 +45,8 @@ export function useSelect(props: IRestProps): { currentSelected: string | number
 				allowClear={allowClear}
 				size={size}
 				placement={placement}
+				mode={isMulti}
+				{...restProps}
 			>
 				{data.map((item, index) =>
 					<Option key={index} value={item.key} >{item.label}</Option>

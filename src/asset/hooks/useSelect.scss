@@ -1,23 +1,19 @@
 @import "../../asset/common.scss";
 
 .ant-select {
-	&.ant-select-single {
-		&.ant-select-show-arrow {
-			min-width: 140px !important;
+	min-width: 140px !important;
 
-			.ant-select-arrow {
-				position: absolute;
+	.ant-select-arrow {
+		position: absolute;
 
-				&:after {
-					content: "";
-					position: relative;
-					top: 0;
-					right: 24px;
-					height: 30px;
-					width: 1px;
-					background-color: $MISCHKA;
-				}
-			}
+		&:after {
+			content: "";
+			position: relative;
+			top: 0;
+			right: 24px;
+			height: 30px;
+			width: 1px;
+			background-color: $MISCHKA;
 		}
 	}
 }
