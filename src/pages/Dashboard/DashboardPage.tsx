@@ -11,14 +11,19 @@ export default function Dashboard() {
   ]);
 
   const { currentSelected, selectDom } = useSelect(
-    true,
-    [
-      { key: "all", label: "All" },
-      { key: "1st", label: "1ST" },
-      { key: "2st", label: "2ST" },
-      { key: "3st", label: "3ST" },
-      { key: "4st", label: "4ST" },
-    ]);
+    {
+      data: [
+        { key: "all", label: "All" },
+        { key: "1st", label: "1ST" },
+        { key: "2st", label: "2ST" },
+        { key: "3st", label: "3ST" },
+        { key: "4st", label: "4ST" },
+      ],
+      disabled: false,
+      showSearch: false,
+      status: "error",
+    }
+  );
 
   const tabContent = useMemo(() => {
     let content: JSX.Element | undefined;
@@ -29,10 +34,6 @@ export default function Dashboard() {
     }
     return content;
   }, [currentTab]);
-
-  console.log(tabContent);
-  console.log("currentSelected", currentSelected);
-  console.log("selectDom", selectDom);
 
   return (
     <div className="site-card-wrapper Dashboard">
