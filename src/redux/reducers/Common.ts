@@ -6,7 +6,7 @@ const initialState: CommonState = {
   test: false,
 };
 
-const Common = (state = initialState, action: any) => {
+const Common = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state;

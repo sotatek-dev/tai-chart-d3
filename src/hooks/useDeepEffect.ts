@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import _ from "lodash";
+import { isEqual } from "lodash";
 
 export const useDeepEffect = (effectFunc, deps) => {
   const isFirstRender = useRef(true);
@@ -9,7 +9,7 @@ export const useDeepEffect = (effectFunc, deps) => {
       isFirstRender.current = false;
       return;
     }
-    const isChangedDeps = deps.some((dep, index) => !_.isEqual(dep, prepDeps.current[index]));
+    const isChangedDeps = deps.some((dep, index) => !isEqual(dep, prepDeps.current[index]));
     if (isChangedDeps) {
       effectFunc();
       prepDeps.current = deps;

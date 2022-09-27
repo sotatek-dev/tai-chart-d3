@@ -16,14 +16,12 @@ type ChartProps = {
   data: ChartData<"bar">;
   chartId: string;
   options?:
-    | _DeepPartialObject<
-        CoreChartOptions<"bar"> &
-          ElementChartOptions<"bar"> &
-          PluginChartOptions<"bar"> &
-          DatasetChartOptions<"bar"> &
-          ScaleChartOptions<"bar"> &
-          BarControllerChartOptions
-      >
+    | _DeepPartialObject<CoreChartOptions<"bar"> &
+    ElementChartOptions<"bar"> &
+    PluginChartOptions<"bar"> &
+    DatasetChartOptions<"bar"> &
+    ScaleChartOptions<"bar"> &
+    BarControllerChartOptions>
     | undefined;
 };
 

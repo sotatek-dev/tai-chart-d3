@@ -20,7 +20,7 @@ const configureStore = () => {
     stateReconciler: autoMergeLevel2,
     blacklist: [],
   };
-  const persistedReducer = persistReducer(persistConfig, rootReducer);
+  const persistedReducer = persistReducer(persistConfig, rootReducer as any);
 
   return createStore(persistedReducer, composeEnhancers(applyMiddleware(thunk)));
 };

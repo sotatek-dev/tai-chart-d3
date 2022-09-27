@@ -50,8 +50,7 @@
   "lint-staged": {
     "*.{js, jsx, ts, tsx, md, html}": [
       "npm run lint",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "resolutions": {
