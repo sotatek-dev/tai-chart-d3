@@ -9,7 +9,7 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
     "noImplicitThis": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": false,
     "moduleResolution": "node",
     "isolatedModules": true,
     "downlevelIteration": true,

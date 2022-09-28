@@ -16,12 +16,14 @@ type ChartProps = {
   data: ChartData<"bar">;
   chartId: string;
   options?:
-    | _DeepPartialObject<CoreChartOptions<"bar"> &
-    ElementChartOptions<"bar"> &
-    PluginChartOptions<"bar"> &
-    DatasetChartOptions<"bar"> &
-    ScaleChartOptions<"bar"> &
-    BarControllerChartOptions>
+    | _DeepPartialObject<
+        CoreChartOptions<"bar"> &
+          ElementChartOptions<"bar"> &
+          PluginChartOptions<"bar"> &
+          DatasetChartOptions<"bar"> &
+          ScaleChartOptions<"bar"> &
+          BarControllerChartOptions
+      >
     | undefined;
 };
 
@@ -44,7 +46,7 @@ export default function BarChart({ data, chartId, options }: ChartProps) {
   }, []);
   return (
     <>
-      <canvas id={chartId} ref={chartRef}></canvas>
+      <canvas id={chartId} ref={chartRef} />
     </>
   );
 }
