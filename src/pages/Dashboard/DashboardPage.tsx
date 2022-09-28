@@ -21,7 +21,7 @@ export default function Dashboard() {
     disabled: false,
     showSearch: false,
     // status: "error",
-    // isMulti: "multiple"
+    // isMulti: "multiple",
   });
 
   const tabContent = useMemo(() => {

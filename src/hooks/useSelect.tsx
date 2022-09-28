@@ -23,11 +23,13 @@ interface IRestProps {
   size?: "large" | "middle" | "small";
   placement?: "bottomLeft" | "bottomRight" | "topLeft" | "topRight";
   isMulti?: "multiple" | "tags";
-
   [x: string]: any;
 }
 
-export function useSelect(props: IRestProps): { currentSelected: string | number; selectDom: ReactElement } {
+export function useSelect(props: IRestProps): {
+  currentSelected: string | number | string[] | number[];
+  selectDom: ReactElement;
+} {
   const {
     data,
     className,
@@ -44,7 +46,7 @@ export function useSelect(props: IRestProps): { currentSelected: string | number
     isMulti,
     ...restProps
   } = props;
-  const [currentSelected, setCurrentSelected] = useState<string | number>(data[0].key.toString());
+  const [currentSelected, setCurrentSelected] = useState<string | number | string[] | number[]>(data[0].key.toString());
 
   const selectDom = useMemo(() => {
     return (
