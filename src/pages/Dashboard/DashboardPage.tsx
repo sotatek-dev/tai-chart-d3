@@ -10,21 +10,19 @@ export default function Dashboard() {
     { key: "current", label: "Current Month" },
   ]);
 
-  const { currentSelected, selectDom } = useSelect(
-    {
-      data: [
-        { key: "all", label: "All" },
-        { key: "1st", label: "1ST" },
-        { key: "2st", label: "2ST" },
-        { key: "3st", label: "3ST" },
-        { key: "4st", label: "4ST" },
-      ],
-      disabled: false,
-      showSearch: false,
-      // status: "error",
-      // isMulti: "multiple"
-    }
-  );
+  const { currentSelected, selectDom } = useSelect({
+    data: [
+      { key: "all", label: "All" },
+      { key: "1st", label: "1ST" },
+      { key: "2st", label: "2ST" },
+      { key: "3st", label: "3ST" },
+      { key: "4st", label: "4ST" },
+    ],
+    disabled: false,
+    showSearch: false,
+    // status: "error",
+    // isMulti: "multiple"
+  });
 
   const tabContent = useMemo(() => {
     let content: JSX.Element | undefined;
@@ -41,5 +39,5 @@ export default function Dashboard() {
       {tabsDom}
       {selectDom}
     </div>
-  )
+  );
 }
